@@ -6,6 +6,21 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+
+    firebase: {
+      apiKey: 'AIzaSyDldW1iWoFQA3CyDhw97yHp4ducBjTY6IQ',
+      authDomain: 'library-app-dc354.firebaseapp.com',
+      databaseURL: 'https://library-app-dc354.firebaseio.com',
+      storageBucket: 'library-app-dc354.appspot.com',
+    },
+
+    // if using ember-cli-content-security-policy
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -39,7 +54,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV['ember-faker'] = {
+      enabled: true
+    };
   }
 
   return ENV;
