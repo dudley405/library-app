@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'library-app',
     environment: environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
 
     firebase: {
       apiKey: 'AIzaSyDldW1iWoFQA3CyDhw97yHp4ducBjTY6IQ',
